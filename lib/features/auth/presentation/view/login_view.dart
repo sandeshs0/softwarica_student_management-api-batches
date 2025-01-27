@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:softwarica_student_management_bloc/core/common/snackbar/my_snackbar.dart';
 import 'package:softwarica_student_management_bloc/features/auth/presentation/view/register_view.dart';
 import 'package:softwarica_student_management_bloc/features/auth/presentation/view_model/login/login_bloc.dart';
-import 'package:softwarica_student_management_bloc/features/home/presentation/view/home_view.dart';
 
 class LoginView extends StatelessWidget {
   LoginView({super.key});
@@ -75,21 +73,21 @@ class LoginView extends StatelessWidget {
                                 ),
                               );
 
-                          if (_usernameController.text == 'sandesh' &&
-                              _passwordController.text == 'password') {
-                            context.read<LoginBloc>().add(
-                                  NavigateHomeScreenEvent(
-                                    destination: HomeView(),
-                                    context: context,
-                                  ),
-                                );
-                          } else {
-                            showMySnackBar(
-                              context: context,
-                              message: 'Invalid username or password',
-                              color: Colors.red,
-                            );
-                          }
+                          // if (_usernameController.text == 'sand' &&
+                          //     _passwordController.text == 'password') {
+                          //   context.read<LoginBloc>().add(
+                          //         NavigateHomeScreenEvent(
+                          //           destination: HomeView(),
+                          //           context: context,
+                          //         ),
+                          //       );
+                          // } else {
+                          //   showMySnackBar(
+                          //     context: context,
+                          //     message: 'Invalid username or password',
+                          //     color: Colors.red,
+                          //   );
+                          // }
                         }
                       },
                       child: const SizedBox(
